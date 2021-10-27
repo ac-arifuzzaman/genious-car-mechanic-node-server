@@ -6,7 +6,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const port = 9000;
+const port = process.env.POST || 9000;
 
 // middleware
 app.use(cors());
@@ -65,7 +65,7 @@ run().catch(console.dir);
 // pass: g9ofYyQUuYf8gA4g name: geniouscar
 
 app.get('/', (req, res) => {
-    res.send('Running genious server abar')
+    res.send('Running genious server abar shuru')
 });
 
 app.listen(port, () => {
